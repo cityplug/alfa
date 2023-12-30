@@ -1,0 +1,43 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/settings
+
+title: Dreamcast Dashboard
+
+background:
+  image: /images/background.jpeg
+  blur: sm
+  saturate: 25 # 0, 50, 100... see https://tailwindcss.com/docs/backdrop-saturate
+  brightness: 30 # 0, 50, 75... see https://tailwindcss.com/docs/backdrop-brightness
+  opacity: 50 # 0-100
+
+theme: dark
+headerStyle: underlined
+iconStyle: theme
+statusStyle: basic
+layout:
+  Core - Services:
+    style: row
+    columns: 3
+  Secondary - Services:
+    style: row
+    columns: 3
+  Remote - Services:
+    style: row
+    columns: 2
+  Other - Services:
+    style: row
+    columns: 3
+
+hideVersion: true
+hideErrors: true
+showStats: true
+quicklaunch:
+  searchDescriptions: true
+  hideInternetSearch: true
+  hideVisitURL: true
+logpath: /env/appdata/homepage/
+
+providers:
+  openweathermap: openweathermapapikey
+  weatherapi: weatherapiapikey

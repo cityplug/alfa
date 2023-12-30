@@ -1,0 +1,91 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/services
+
+- Core - Services:
+    - Proxmox:
+        href: https://192.168.10.254:8006
+        description: ...
+        icon: proxmox.png
+        ping: 192.168.10.254
+        widget:
+          type: proxmox
+          url: https://192.168.10.254:8006
+          username: api@pam!homepage
+          password: af74dccf3-52a3-4dfd-b087-94d33e0f76d3
+          node: alfa
+    - OpnSense:
+        href: https://10.0.0.1
+        description: ... ...
+        icon: opnsense.png
+        ping: 10.0.0.1
+    - Pihole:
+        href: http://192.168.10.253/admin
+        description: ... ... ...
+        icon: pi-hole.png
+        ping: 192.168.10.253
+        container: pihole
+        widget:
+          type: pihole
+          url: http://192.168.10.253
+          key: 28c361af2b72518bbb6c37405f604461c1a4143d4f9af9d99b16be5a25765aa3
+
+- Secondary - Services:
+    - Home Assistant:
+        href: https://192.168.10.30:8006
+        description: ...
+        icon: home-assistant-alt.png
+        ping: 192.168.10.30:8006
+    - Portainer:
+        href: https://192.168.10.254:9443
+        description: ... ...
+        icon: portainer.png
+        ping: 192.168.10.254:9443
+        container: portainer
+    - Nextcloud:
+        href: http://192.168.10.243:8080
+        description: ... ... ...
+        icon: nextcloud.png
+        ping: 192.168.10.243
+        container: nextcloud_app
+
+- Remote - Services:
+    - Unifi Portal:
+        href: https://unifi.ui.com/consoles
+        description: ... ...
+        icon: unifi.png
+        ping: https://unifi.ui.com/consoles
+    - Titan:
+        href: http://192.168.10.92:8921
+        description: ... ...
+        ping: http://192.168.10.92
+        icon: baserow.png
+
+- Other - Services:
+    - Proxy Manager:
+        href: http://192.168.10.253:81
+        description: ... ...
+        icon: nginx-proxy-manager.png
+        ping: 192.168.10.253
+        container: nginx-pm
+        widget:
+          type: npm
+          url: http://192.168.10.253:81
+          username: seni@cityplug.co.uk
+          password: Szxs234.
+    - Netboot:
+        href: https://192.168.10.254:9443
+        description: ... ... ... ...
+        icon: netboot.png
+        ping: 192.168.10.254:9443
+        container: netboot
+    - Uptime-Kuma:
+        icon: uptime-kuma.png
+        href: http://192.168.10.254:13001
+        description: ... ...
+        ping:
+        container: uptime-kuma
+        widget:
+          type: uptimekuma
+          url: http://192.168.10.254:13001
+          slug: statuspageslug

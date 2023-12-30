@@ -1,0 +1,25 @@
+version: "3.3"
+
+services:
+
+  homepage:
+    container_name: homepage
+    hostname: discord.homepage
+    image: ghcr.io/gethomepage/homepage:latest
+    volumes:
+      - ./config:/app/config
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./images:/app/public/images
+    ports:
+      - 85:3000
+    restart: always
+
+  uptime-kuma:
+    container_name: uptime-kuma
+    hostname: uptime-kuma
+    image: elestio/uptime-kuma:latest
+    volumes:
+    - ./data:/app/data
+    ports:
+    - 13001:3001
+    restart: always
