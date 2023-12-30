@@ -31,4 +31,4 @@ services:
       - MYSQL_USER=nextcloud
       - MYSQL_HOST=db
       - PHP_UPLOAD_LIMIT=16G
-      - PHP_MEMORY_LIMIT=16G
+      - PHP_MEMORY_LIMIT=8G

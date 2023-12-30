@@ -4,7 +4,7 @@ services:
 
   homepage:
     container_name: homepage
-    hostname: discord.homepage
+    hostname: dreamcast.homepage
     image: ghcr.io/gethomepage/homepage:latest
     volumes:
       - /env/appdata/homepage:/app/config
