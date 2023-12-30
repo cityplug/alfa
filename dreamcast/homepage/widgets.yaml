@@ -25,7 +25,7 @@
 
 - greeting:
     text_size: xl
-    text: Discord Server
+    text: Dreamcast
 
 - openmeteo:
     label: London

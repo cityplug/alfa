@@ -4,38 +4,38 @@
 
 - Core - Services:
     - Proxmox:
-        href: https://192.168.10.254:8006
+        href: https://10.0.0.254:8006
         description: ...
         icon: proxmox.png
-        ping: 192.168.10.254
+        ping: 10.0.0.254
         widget:
           type: proxmox
-          url: https://192.168.10.254:8006
+          url: https://10.0.0.254:8006
           username: api@pam!homepage
           password: af74dccf3-52a3-4dfd-b087-94d33e0f76d3
           node: alfa
     - OpnSense:
-        href: https://10.0.0.1
+        href: https://192.168.30.254
         description: ... ...
         icon: opnsense.png
-        ping: 10.0.0.1
+        ping: 192.168.30.254
     - Pihole:
-        href: http://192.168.10.253/admin
+        href: http://192.168.30.253/admin
         description: ... ... ...
         icon: pi-hole.png
-        ping: 192.168.10.253
+        ping: 192.168.30.253
         container: pihole
         widget:
           type: pihole
-          url: http://192.168.10.253
+          url: http://192.168.30.253
           key: 28c361af2b72518bbb6c37405f604461c1a4143d4f9af9d99b16be5a25765aa3
 
 - Secondary - Services:
     - Home Assistant:
-        href: https://192.168.10.30:8006
+        href: https://192.168.30.34:8006
         description: ...
         icon: home-assistant-alt.png
-        ping: 192.168.10.30:8006
+        ping: 192.168.30.34:8006
     - Portainer:
         href: https://192.168.10.254:9443
         description: ... ...
@@ -43,10 +43,10 @@
         ping: 192.168.10.254:9443
         container: portainer
     - Nextcloud:
-        href: http://192.168.10.243:8080
+        href: http://192.168.30.33:8080
         description: ... ... ...
         icon: nextcloud.png
-        ping: 192.168.10.243
+        ping: 192.168.30.33
         container: nextcloud_app
 
 - Remote - Services:
@@ -63,14 +63,14 @@
 
 - Other - Services:
     - Proxy Manager:
-        href: http://192.168.10.253:81
+        href: http://192.168.30.30:81
         description: ... ...
         icon: nginx-proxy-manager.png
-        ping: 192.168.10.253
+        ping: 192.168.30.30
         container: nginx-pm
         widget:
           type: npm
-          url: http://192.168.10.253:81
+          url: http://192.168.30.30:81
           username: seni@cityplug.co.uk
           password: Szxs234.
     - Netboot:
@@ -81,11 +81,11 @@
         container: netboot
     - Uptime-Kuma:
         icon: uptime-kuma.png
-        href: http://192.168.10.254:13001
+        href: http://192.168.30.32:13001
         description: ... ...
         ping:
         container: uptime-kuma
         widget:
           type: uptimekuma
-          url: http://192.168.10.254:13001
+          url: http://192.168.30.32:13001
           slug: statuspageslug
