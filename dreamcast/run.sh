@@ -21,6 +21,10 @@ docker run -d -p 9001:9001 --name portainer_agent --restart always -v /var/run/d
 rm -rf /etc/update-motd.d/* && rm -rf /etc/motd
 mv /opt/alfa/dreamcast/10-uname /etc/update-motd.d/ && chmod +x /etc/update-motd.d/10-uname
 
+# -- Parent Folder
+mkdir -p /env/appdata/ 
+chmod -R 777 /env/ && chown -R nobody:nogroup /env/
+
 #--
 systemctl enable docker 
 docker-compose --version && docker --version
@@ -32,4 +36,4 @@ docker stop homepage
 rm -rf /env/appdata/homepage/
 mv /opt/alfa/dreamcast/homepage /env/appdata/
 docker start homepage
---------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------
