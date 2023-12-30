@@ -7,7 +7,7 @@ services:
     hostname: discord.homepage
     image: ghcr.io/gethomepage/homepage:latest
     volumes:
-      - /env/appdata/homepage/config:/app/config
+      - /env/appdata/homepage:/app/config
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - /env/appdata/homepage/images:/app/public/images
     ports:

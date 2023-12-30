@@ -11,8 +11,6 @@ apt install ca-certificates curl gnupg cifs-utils -y
 
 # --- Install Docker & Docker Compose 
 curl -sSL https://get.docker.com/ | sh && apt install docker-compose -y
-#wget https://github.com/docker/compose/releases/download/v2.23.0/docker-compose-linux-x86_64 -O /usr/local/bin/docker-compose
-#chmod +x /usr/local/bin/docker-compose && apt install docker-compose -y
 
 # --- Portainer Agent service
 docker run -d -p 9001:9001 --name portainer_agent --restart always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent:latest
@@ -23,7 +21,6 @@ mv /opt/alfa/dreamcast/10-uname /etc/update-motd.d/ && chmod +x /etc/update-motd
 
 # -- Parent Folder
 mkdir -p /env/appdata/ 
-chmod -R 777 /env/ && chown -R nobody:nogroup /env/
 
 #--
 systemctl enable docker 
