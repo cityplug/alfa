@@ -3,7 +3,7 @@
 # Debian 512GB / 2 CORES - (nextcloud.alfa.cityplug.io) setup script.
 
 # apt update && apt install git -y && cd /opt && git clone https://github.com/cityplug/alfa && apt full-upgrade -y && chmod +x /opt/alfa/nextcloud/run.sh && reboot
-# cd /opt/alfa/nextcloud && ./run.sh
+# mv /opt/alfa/nextcloud/ /opt && rm -rf /opt/alfa/ && cd /opt/nextcloud && ./run.sh
 
 # --- Install Packages
 apt update && apt full-upgrade -y

@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Debian 8GB - (dreamcast.alfa.cityplug.io) setup script.
+# Debian 16GB / 1 CORE - (bigcapital.alfa.cityplug.io) setup script.
 
-# apt update && apt install git -y && cd /opt && git clone https://github.com/cityplug/alfa && apt full-upgrade -y && chmod +x /opt/alfa/dreamcast/run.sh && reboot
-# mv /opt/alfa/dreamcast/ /opt && rm -rf /opt/alfa/ && cd /opt/dreamcast && ./run.sh
+# apt update && apt install git -y && cd /opt && git clone https://github.com/cityplug/alfa && apt full-upgrade -y && chmod +x /opt/alfa/bigcapital/run.sh && reboot
+# mv /opt/alfa/bigcapital/ /opt && rm -rf /opt/alfa/ && cd /opt/bigcapital && ./run.sh
 
 # --- Install Packages
 apt update && apt full-upgrade -y
@@ -17,17 +17,11 @@ docker run -d -p 9001:9001 --name portainer_agent --restart always -v /var/run/d
 
 # --- Addons
 rm -rf /etc/update-motd.d/* && rm -rf /etc/motd
-mv /opt/alfa/dreamcast/10-uname /etc/update-motd.d/ && chmod +x /etc/update-motd.d/10-uname
+mv /opt/alfa/bigcapital/10-uname /etc/update-motd.d/ && chmod +x /etc/update-motd.d/10-uname
 
 #--
 systemctl enable docker 
 docker-compose --version && docker --version
 docker compose up -d
 docker ps
-
-# --- Build Homepage
-docker stop homepage
-rm -rf /env/appdata/homepage/
-mv /opt/alfa/dreamcast/homepage /env/appdata/
-docker start homepage
 #--------------------------------------------------------------------------------

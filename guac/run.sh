@@ -3,7 +3,7 @@
 # Debian 16GB / 1 CORE - (guac.alfa.cityplug.io) setup script.
 
 # apt update && apt install git -y && cd /opt && git clone https://github.com/cityplug/alfa && apt full-upgrade -y && chmod +x /opt/alfa/guac/run.sh && reboot
-# cd /opt/alfa/guac && ./run.sh
+# mv /opt/alfa/guac/ /opt && rm -rf /opt/alfa/ && cd /opt/guac && ./run.sh
 
 # --- Install Packages
 apt update && apt full-upgrade -y

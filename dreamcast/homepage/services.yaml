@@ -35,12 +35,13 @@
         href: https://192.168.30.34:8006
         description: ...
         icon: home-assistant-alt.png
-        ping: 192.168.30.34:8006
+        ping: 192.168.30.34
+        container: homeassistant
     - Portainer:
-        href: https://192.168.10.254:9443
+        href: https://192.168.30.32:9000
         description: ... ...
         icon: portainer.png
-        ping: 192.168.10.254:9443
+        ping: 192.168.30.32:9000
         container: portainer
     - Nextcloud:
         href: http://192.168.30.33:8080
@@ -56,9 +57,9 @@
         icon: unifi.png
         ping: https://unifi.ui.com/consoles
     - Titan:
-        href: http://192.168.10.92:8921
+        href: http://192.168.7.254:8921
         description: ... ...
-        ping: http://192.168.10.92
+        ping: 192.168.7.254
         icon: baserow.png
 
 - Other - Services:
@@ -77,21 +78,27 @@
         href: https://192.168.10.254:9443
         description: ... ... ... ...
         icon: netboot.png
-        ping: 192.168.10.254:9443
+        ping: 
         container: netboot
     - Uptime-Kuma:
         icon: uptime-kuma.png
         href: http://192.168.30.32:13001
         description: ... ...
-        ping:
+        ping: 
         container: uptime-kuma
         widget:
           type: uptimekuma
           url: http://192.168.30.32:13001
           slug: statuspageslug
     - Guac:
-        icon: guac.png
+        icon: guacamole.png
         href: http://192.168.30.37:82
         description: ... ... ... ...
-        ping:
+        ping: 192.168.30.37
         container: guac
+    - Big Capital:
+        icon: https://raw.githubusercontent.com/abouolia/blog/main/public/bigcapital.svg
+        href: http://192.168.30.35:82
+        description: ... ... ... ...
+        ping: 192.168.30.35
+        container: bigcapital
