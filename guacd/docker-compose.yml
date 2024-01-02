@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  guac:
+    container_name: guac
+    hostname: guac
+    image: lscr.io/linuxserver/guacd:latest
+    volumes:
+      - /env/appdata/nginx-pm:/data
+      - /env/appdata/nginx-pm/letsencrypt:/etc/letsencrypt
+    ports:
+      - 82:4822
+    restart: unless-stopped

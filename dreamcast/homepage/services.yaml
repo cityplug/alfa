@@ -89,3 +89,9 @@
           type: uptimekuma
           url: http://192.168.30.32:13001
           slug: statuspageslug
+    - Guac:
+        icon: guac.png
+        href: http://192.168.30.37:82
+        description: ... ... ... ...
+        ping:
+        container: guac
